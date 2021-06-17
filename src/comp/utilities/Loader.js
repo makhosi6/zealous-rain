@@ -8,8 +8,7 @@ export default class Loader extends Component {
         return (
            <Container>
                <div>
-                   <img style={{ flexGrow: 1}} className="img" src={logo}/>
-                    Loading...
+                   <img style={{ flexGrow: 1}} className="img" src={logo} alt="loader"/>
                </div>
            </Container>
         )
