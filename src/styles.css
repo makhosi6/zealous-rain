@@ -1,6 +1,7 @@
 .img {
   border: "1px solid";
   max-width: 300px;
+  max-height: 300px;
   margin: auto;
   background-image: url('./img/Quicloc8-logo.png');
   background-position: center;
