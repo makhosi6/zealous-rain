@@ -13,6 +13,12 @@ export default class App extends React.Component {
     error: "",
     hasLoaded: false,
   };
+
+  handleLoad = () => {
+    setTimeout(() => {
+      this.setState({ hasLoaded: true });
+    }, 3500);
+  }
   componentDidCatch(error, info) {
     // Display fallback UI
     console.log({ error });
@@ -20,9 +26,7 @@ export default class App extends React.Component {
     this.setState({ error: error.message });
   }
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ hasLoaded: true });
-    }, 3500);
+      window.addEventListener('load', this.handleLoad);
   }
 
   render() {
