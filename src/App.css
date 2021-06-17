@@ -38,11 +38,11 @@
   top: 50vh;
   left: 50vw;
   transform: translate(-50%,-50%);
-  -webkit-animation: blinker .5s;
+  -webkit-animation: blinker 1s;
   -webkit-animation-iteration-count: infinite;
-  -moz-animation: blinker .5s;
+  -moz-animation: blinker 1s;
   -moz-animation-iteration-count: infinite;
-  -o-animation: blinker .5s;
+  -o-animation: blinker 1s;
   -o-animation-iteration-count: infinite;
 }
 
