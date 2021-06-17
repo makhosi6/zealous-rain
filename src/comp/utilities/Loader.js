@@ -7,7 +7,7 @@ export default class Loader extends Component {
         return (
            <Container>
                <div className="img">
-                    
+                    Loading...
                </div>
            </Container>
         )
