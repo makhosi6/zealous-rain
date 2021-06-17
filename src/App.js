@@ -44,6 +44,9 @@ export default class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/messages" component={Messages} />
+              <Route exact path="/:slug">
+                <Error error={this.state.error}/>
+              </Route>
             </Switch>
           </>
         ) : (

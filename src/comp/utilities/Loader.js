@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Container from '@material-ui/core/Container';
+
 
 export default class Loader extends Component {
     render() {
         return (
-            <div>
-                Loader
-            </div>
+           <Container>
+               <div className="img">
+
+               </div>
+           </Container>
         )
     }
 }
