@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import logo from "../../img/quickloc8.svg"
 import Container from '@material-ui/core/Container';
 
 
@@ -7,6 +8,7 @@ export default class Loader extends Component {
         return (
            <Container>
                <div className="img">
+                   <img src={logo}/>
                     Loading...
                </div>
            </Container>
