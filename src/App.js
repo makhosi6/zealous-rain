@@ -4,7 +4,8 @@ export default function App() {
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
-      <h2>Edit to see some magic happens!</h2>
+      <h2>Edit to see some magic happens!. from home</h2>
+      
     </div>
   );
 }
