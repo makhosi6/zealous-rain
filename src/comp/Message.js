@@ -16,8 +16,11 @@ export default class Message extends Component {
             primary={this.props.data.subject}
             secondary={this.props.data.message}
           />
+          <div>
+
           <span> 01-21 </span>
           <span>*</span>
+          </div>
         </ListItem>
         <Divider light />
       </>
