@@ -1,6 +1,12 @@
 import React, { Component } from "react";
-import {ListItemText,ListItem, Divider, ListItemAvatar, Avatar }from "@material-ui/core";
-import ImageIcon from "@material-ui/icons/Image";
+import {
+  ListItemText,
+  ListItem,
+  Divider,
+  ListItemAvatar,
+  Avatar,
+} from "@material-ui/core";
+import {Image as ImageIcon,StarOutline} from "@material-ui/icons/Image";
 
 export default class Message extends Component {
   render() {
@@ -17,9 +23,8 @@ export default class Message extends Component {
             secondary={this.props.data.message}
           />
           <div>
-
-          <span> 01-21 </span>
-          <span>*</span>
+            <small>{this.props.data.display}</small>
+            <span><StarOutline /></span>
           </div>
         </ListItem>
         <Divider light />
