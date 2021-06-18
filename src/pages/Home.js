@@ -7,7 +7,7 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <Container>
+        <Container style={{width: "100%"}} >
           <Map/>
           <Speaddial />
         </Container>{" "}
