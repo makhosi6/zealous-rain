@@ -10,7 +10,7 @@ export default class Speeeddial extends Component {
         variant="extended"
         style={{ position: "absolute", bottom: "20px", right: "20px" }} >
         {/* <Link to="/messages"> */}
-          <Mail />
+          <Mail style={{marginRight: "10px"}}/>
           Messages
         {/* </Link> */}
       </Fab>
