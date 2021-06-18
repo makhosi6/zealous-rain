@@ -45,6 +45,9 @@
   -o-animation: blinker 1s;
   -o-animation-iteration-count: infinite;
 }
-
-
-
+p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-height: 51px;
+}
