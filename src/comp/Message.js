@@ -12,7 +12,9 @@ export default class Message extends Component {
   render() {
     return (
       <>
-        <ListItem style={{ paddingLeft: "0", paddingRight: "0", lineHeight: "1.5" }}>
+        <ListItem
+          style={{ paddingLeft: "0", paddingRight: "0", lineHeight: "1.5" }}
+        >
           <ListItemAvatar>
             <Avatar>
               <ImageIcon />
@@ -23,8 +25,19 @@ export default class Message extends Component {
             secondary={this.props.data.message}
           />
           <div>
-            <small style={{position: "absolute", top: "5px", right: "0", width: "100%"}} >{this.props.data.display}</small>
-              <StarOutline style={{position: "absolute", bottom: "0", right: "0"}} />
+            <small
+              style={{
+                position: "absolute",
+                top: "5px",
+                right: "0",
+                width: "100%",
+              }}
+            >
+              {this.props.data.display}
+            </small>
+            <StarOutline
+              style={{ position: "absolute", bottom: "0", right: "0" }}
+            />
           </div>
         </ListItem>
         <Divider light />
