@@ -6,7 +6,7 @@ import {
   ListItemAvatar,
   Avatar,
 } from "@material-ui/core";
-import { Image as ImageIcon, StarOutline } from "@material-ui/icons/Image";
+import { Image as ImageIcon, StarOutline } from "@material-ui/icons";
 
 export default class Message extends Component {
   render() {
