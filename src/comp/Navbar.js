@@ -6,7 +6,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <div style={flex}>
-            <AppBar position="static">
+            <AppBar position="sticky">
               <Toolbar>
                 <IconButton edge="start" style={{marginRight: "10px"}} color="inherit" aria-label="menu">
                   <MenuIcon />
@@ -21,7 +21,6 @@ export default class Navbar extends Component {
         )
     }
 }
-
 
 const flex = {
     flexGrow: 1
