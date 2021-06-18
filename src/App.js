@@ -26,7 +26,10 @@ export default class App extends React.Component {
     this.setState({ error: error.message });
   }
   componentDidMount() {
-      window.addEventListener('load', this.handleLoad);
+      // window.addEventListener('load', this.handleLoad);
+      setTimeout(() => {
+        this.setState({ hasLoaded: true });
+      }, 3500);
   }
 
   render() {
