@@ -31,7 +31,10 @@
       opacity: 1;
   }
 }
-
+body {
+    margin: 0;
+    padding: 0;
+  }
 .img {
   width: 200px !important;
   position: absolute;
@@ -54,3 +57,11 @@ p{
 .mssg > span {
     font-weight: bold !important;
 }
+.marker {
+    background-image: url('https://raw.githubusercontent.com/makhosi6/zealous-rain/main/src/img/ic_new_white_taxi.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
