@@ -6,13 +6,13 @@ import {
   ListItemAvatar,
   Avatar,
 } from "@material-ui/core";
-import {Image as ImageIcon,StarOutline} from "@material-ui/icons/Image";
+import { Image as ImageIcon, StarOutline } from "@material-ui/icons/Image";
 
 export default class Message extends Component {
   render() {
     return (
       <>
-        <ListItem>
+        <ListItem style={{ paddingLeft: "0", paddingRight: "0" }}>
           <ListItemAvatar>
             <Avatar>
               <ImageIcon />
@@ -24,7 +24,9 @@ export default class Message extends Component {
           />
           <div>
             <small>{this.props.data.display}</small>
-            <span><StarOutline /></span>
+            <span>
+              <StarOutline />
+            </span>
           </div>
         </ListItem>
         <Divider light />
