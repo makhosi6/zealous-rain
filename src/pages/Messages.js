@@ -5,8 +5,8 @@ import Message from "../comp/Message";
 export default class Messages extends Component {
   render() {
     return (
-      <Container maxWidth="md">
-        <List style={{ width: "100%", maxWidth: "400px" }}>
+      <Container >  {/* maxWidth="xl" */}
+        <List style={{ width: "100%", maxWidth: "700px" }}>
           {mssgs.map((x) => (
            <Message key={Math.floor(Math.random()*123456)} data={x} />
           ))}
