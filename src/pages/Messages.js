@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from '@material-ui/core';
-import Messag from "../comp/Message";
+import Message from "../comp/Message";
 
 export default class Messages extends Component {
   render() {
@@ -8,7 +8,7 @@ export default class Messages extends Component {
       <Container maxWidth="md">
         <ol>
           {mssgs.map((x) => (
-           <Message />
+           <Message message={x} />
           ))}
         </ol>
       </Container>
