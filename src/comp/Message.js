@@ -13,30 +13,30 @@ export default class Message extends Component {
     return (
       <>
         <ListItem
-          style={{ paddingLeft: "0", paddingRight: "0", lineHeight: "1.5" }}
+          style={{ paddingLeft: "0", paddingRight: "0"}}
         >
           <ListItemAvatar>
             <Avatar>
               <ImageIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText
+          <ListItemText className="mssg"
             primary={this.props.data.subject}
             secondary={this.props.data.message}
           />
-          <div>
+          <div style={{maxHeight: "max-content", margin: 'auto',}} >
             <small
               style={{
                 position: "absolute",
-                top: "5px",
+                top: "18px",
                 right: "0",
-                width: "100%",
               }}
             >
               {this.props.data.display}
             </small>
             <StarOutline
-              style={{ position: "absolute", bottom: "0", right: "0" }}
+                color="disabled"
+              style={{ marginTop : "30px" }}
             />
           </div>
         </ListItem>

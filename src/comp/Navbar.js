@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {AppBar, Toolbar, Typography,Button, IconButton} from '@material-ui/core';
+import {AppBar, Toolbar, Typography,Button, IconButton, Link} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 export default class Navbar extends Component {
@@ -12,7 +12,9 @@ export default class Navbar extends Component {
                   <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" style={flex}>
-                App
+                <Link href="/" color="inherit">
+                Quicklc8
+                </Link>
                 </Typography>
                 {/* <Button color="inherit">Login</Button> */}
               </Toolbar>

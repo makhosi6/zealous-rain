@@ -51,3 +51,6 @@ p{
     overflow: hidden;
     max-height: 51px;
 }
+.mssg > span {
+    font-weight: bold !important;
+}
