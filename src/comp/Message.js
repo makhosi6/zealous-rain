@@ -17,8 +17,8 @@ export default class Message extends Component {
             </Avatar>
           </ListItemAvatar>
           <ListItemText
-            primary={this.props.subject}
-            secondary={this.props.message}
+            primary={this.props.data.subject}
+            secondary={this.props.data.message}
           />
           <span> 01-21 </span>
           <span>*</span>
