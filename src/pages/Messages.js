@@ -8,7 +8,7 @@ export default class Messages extends Component {
       <Container maxWidth="md">
         <ol>
           {mssgs.map((x) => (
-           <Message message={x} />
+           <Message key={Math.floor(Math.random()*123456)} data={x} />
           ))}
         </ol>
       </Container>
