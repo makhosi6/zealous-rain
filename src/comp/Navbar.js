@@ -1,60 +1,77 @@
-import React, { Component } from 'react';
-import {AppBar, Toolbar, Typography,Button, IconButton, Link} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import React, { Component } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Link,
+} from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import { MyContext } from "../context";
+
 
 export default class Navbar extends Component {
-    render() {
-        return (
-            <div style={flex}>
+  render() {
+    return (
+      <MyContext.Consumer>
+        {(context) => (
+          <div style={flex}>
             <AppBar>
               <Toolbar>
-              <Link href="/" color="inherit">
-                <IconButton edge="start" style={{marginRight: "10px"}} color="inherit" aria-label="menu">
-                  <MenuIcon />
-                </IconButton>
+                <Link href="/" color="inherit">
+                  <IconButton
+                    edge="start"
+                    style={{ marginRight: "10px" }}
+                    color="inherit"
+                    aria-label="menu"
+                  >
+                    <MenuIcon />
+                  </IconButton>
                 </Link>
                 <Typography variant="h6" style={flex}>
-                <Link href="/" color="inherit">
-                Quicklc8
-                </Link>
+                  <Link href={context.current.slug} color="inherit">
+                   {context.current.page}
+                  </Link>
                 </Typography>
                 {/* <Button color="inherit">Login</Button> */}
               </Toolbar>
             </AppBar>
           </div>
-        )
-    }
+        )}
+      </MyContext.Consumer>
+    );
+  }
 }
 
 const flex = {
-    flexGrow: 1
-}
-
-
-
+  flexGrow: 1,
+};
 
 var geojson = {
-  type: 'FeatureCollection',
-  features: [{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-77.032, 38.913]
+  type: "FeatureCollection",
+  features: [
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-77.032, 38.913],
+      },
+      properties: {
+        title: "Mapbox",
+        description: "Washington, D.C.",
+      },
     },
-    properties: {
-      title: 'Mapbox',
-      description: 'Washington, D.C.'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-122.414, 37.776]
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.414, 37.776],
+      },
+      properties: {
+        title: "Mapbox",
+        description: "San Francisco, California",
+      },
     },
-    properties: {
-      title: 'Mapbox',
-      description: 'San Francisco, California'
-    }
-  }]
+  ],
 };

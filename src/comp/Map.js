@@ -17,6 +17,8 @@ export default class Map extends React.PureComponent {
 
   }
   componentDidMount() {
+
+    this.props.currentPage({page:"Quicklc8", slug: "/"});
     const { lng, lat, zoom } = this.state;
     const map = new mapboxgl.Map({
       container: this.mapContainer.current,
@@ -34,6 +36,7 @@ this.props.coords.features.forEach(function(marker) {
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
+    .setRotation(marker.geometry.bearing)
     .addTo(map);
 });
 //

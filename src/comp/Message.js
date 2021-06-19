@@ -9,6 +9,7 @@ import {
 import { Image as ImageIcon, StarOutline } from "@material-ui/icons";
 
 export default class Message extends Component {
+
   render() {
     return (
       <>

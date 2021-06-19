@@ -7,7 +7,7 @@ import { CssBaseline } from "@material-ui/core";
 import Messages from "./pages/Messages";
 import Navbar from "./comp/Navbar";
 import Loader from "./comp/utilities/Loader";
-import Map  from "./comp/Map";
+import { MyContext } from "./context";
 
 export default class App extends React.Component {
   state = {
@@ -42,8 +42,8 @@ export default class App extends React.Component {
       );
     }
     return (
-     
-
+      <MyContext.Consumer>
+      {(context) => (
       <React.Fragment>
         <CssBaseline />
         {this.state.hasLoaded ? (
@@ -51,16 +51,20 @@ export default class App extends React.Component {
             <Navbar />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/messages" component={Messages} />
-              <Route exact path="/:slug">
-                <Error error="404 - Page Not Found!" />
+              <Route exact path="/messages">
+                <Messages currentPage={context.currentPage}  />
               </Route>
+              <Route path="/:slug">
+                <Error currentPage={context.currentPage} error="404 - Page Not Found!" />
+              </Route> 
             </Switch>
           </>
         ) : (
           <Loader />
         )}
       </React.Fragment>
+       )}
+       </MyContext.Consumer>
     );
   }
 }

@@ -11,7 +11,7 @@ export default class Home extends Component {
       {(context) => (
       <div>
         <Container style={{width: "100%"}} >
-          <Map coords={context.coords}/>
+          <Map currentPage={context.currentPage} coords={context.coords}/>
           <Speaddial />
         </Container>{" "}
       </div>
