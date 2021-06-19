@@ -7,7 +7,7 @@ import {
   IconButton,
   Link,
 } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
+import MenuIcon from "./Drawer";
 import { MyContext } from "../context";
 
 
@@ -19,7 +19,6 @@ export default class Navbar extends Component {
           <div style={flex}>
             <AppBar>
               <Toolbar>
-                <Link href="/" color="inherit">
                   <IconButton
                     edge="start"
                     style={{ marginRight: "10px" }}
@@ -28,7 +27,6 @@ export default class Navbar extends Component {
                   >
                     <MenuIcon />
                   </IconButton>
-                </Link>
                 <Typography variant="h6" style={flex}>
                   <Link href={context.current.slug} color="inherit">
                    {context.current.page}

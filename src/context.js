@@ -42,10 +42,6 @@ export default class MyProvider extends Component {
     return output;
   };
 
-  componentDidUpdate() {
-    console.log("DID UPDATE");
-    // console.log(this.state.articles);
-  }
   render() {
     return (
       <MyContext.Provider value={this.state}>
