@@ -8,6 +8,7 @@ export default class Speeeddial extends Component {
     return (
       <Link href="/messages" color="inherit">
         <Fab
+        color="secondary"
           variant="extended"
           style={{ position: "absolute", bottom: "40px", right: "20px" }}
         >
