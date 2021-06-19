@@ -1,49 +1,56 @@
-import React, { useRef, useEffect, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-// import './Map.css';
+import React from "react";
+import mapboxgl from "!mapbox-gl";
 
 mapboxgl.accessToken =
-  'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
+  process.env.REACT_APP_TOKEN;
 
-const Map = () => {
-  const mapContainerRef = useRef(null);
+export default class Map extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lng: 18.5008116,
+      lat: -33.876115,
+      zoom: 9,
+    };
+    this.mapContainer = React.createRef();
 
-  const [lng, setLng] = useState(5);
-  const [lat, setLat] = useState(34);
-  const [zoom, setZoom] = useState(1.5);
 
-  // Initialize map when component mounts
-  useEffect(() => {
+  }
+  componentDidMount() {
+    const { lng, lat, zoom } = this.state;
     const map = new mapboxgl.Map({
-      container: mapContainerRef.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      container: this.mapContainer.current,
+      style: "mapbox://styles/mapbox/streets-v11",
       center: [lng, lat],
-      zoom: zoom
+      zoom: zoom,
     });
+//
+this.props.coords.features.forEach(function(marker) {
 
-    // Add navigation control (the +/- zoom buttons)
-    map.addControl(new mapboxgl.NavigationControl(), 'top-right');
+  // create a HTML element for each feature
+  const el = document.createElement('div');
+  el.className = 'marker';
 
-    map.on('move', () => {
-      setLng(map.getCenter().lng.toFixed(4));
-      setLat(map.getCenter().lat.toFixed(4));
-      setZoom(map.getZoom().toFixed(2));
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+    .setLngLat(marker.geometry.coordinates)
+    .addTo(map);
+});
+//
+    map.on("move", () => {
+      this.setState({
+        lng: map.getCenter().lng.toFixed(4),
+        lat: map.getCenter().lat.toFixed(4),
+        zoom: map.getZoom().toFixed(2),
+      });
     });
-
-    // Clean up on unmount
-    return () => map.remove();
-  }, []);
-
-  return (
-    <div>
-      <div className='sidebarStyle'>
-        <div>
-          Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-        </div>
+  }
+  render() {
+    return (
+      
+      <div>
+        <div ref={this.mapContainer} className="map-container" />
       </div>
-      <div className='map-container' ref={mapContainerRef} />
-    </div>
-  );
-};
-
-export default Map;
+    );
+  }
+}

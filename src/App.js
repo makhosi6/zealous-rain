@@ -51,7 +51,6 @@ export default class App extends React.Component {
             <Navbar />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/map" component={Map} />
               <Route exact path="/messages" component={Messages} />
               <Route exact path="/:slug">
                 <Error error="404 - Page Not Found!" />
