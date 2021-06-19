@@ -16,7 +16,6 @@ export default class MyProvider extends Component {
   }
   currentPage = (current ={page: "Quicklc8", slug: '/'}) => {
       this.setState({current})
-      console.log({current})
   }
   fetchCoords = () => {
     let output = {

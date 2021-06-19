@@ -59,16 +59,15 @@ export default function TempDrawer() {
 
   const list = (anchor) => (
     <div
-      key={`${Math.random() * 1000}`}
       className={clsx(classes.list)}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        <ListItem key={`${Math.random() * 1000}`} button>
-          <Typography className={classes.title} variant="inherit" noWrap>
-            <Link color="inherit" href="/">
+      <List component="div">
+        <Link color="inherit" href="/">
+          <ListItem button>
+            <Typography className={classes.title} variant="inherit" noWrap>
               <img
                 style={{ alignItems: "right", objectFit: "contain" }}
                 src={logo}
@@ -78,15 +77,15 @@ export default function TempDrawer() {
                 sizes=""
                 srcSet={logo}
               />
-            </Link>
-          </Typography>
-        </ListItem>
+            </Typography>
+          </ListItem>
+        </Link>
         <Divider />
 
         {items.map((item) => (
           <>
             <Link href={item.text}>
-              <ListItem button key={`${Math.random() * 1000}${item.key}`}>
+              <ListItem key={Math.floor(Math.random * 1900)} button>
                 <ListItemIcon>
                   {item.name === "Home" ? <Home /> : <Mail />}
                 </ListItemIcon>
@@ -102,7 +101,10 @@ export default function TempDrawer() {
   return (
     <div>
       <React.Fragment key="left">
-        <MenuIcon onClick={toggleDrawer("left", true)} />
+        <MenuIcon
+          key={Math.floor(Math.random * 1900)}
+          onClick={toggleDrawer("left", true)}
+        />
         <Drawer
           component="div"
           anchor="left"

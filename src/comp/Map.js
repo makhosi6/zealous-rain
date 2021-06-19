@@ -33,7 +33,7 @@ this.props.coords.features.forEach(function(marker) {
   const el = document.createElement('div');
   el.className = 'marker';
 
-  // make a marker for each feature and add to the map
+  // make a marker for each feature and add to the map and add options
   new mapboxgl.Marker(el)
     .setLngLat(marker.geometry.coordinates)
     .setRotation(marker.geometry.bearing)

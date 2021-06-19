@@ -6,12 +6,10 @@ import { MyProvider } from "./context";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <StrictMode>
     <MyProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>{" "}
-    </MyProvider>{" "}
-  </StrictMode>,
+    </MyProvider>,
   rootElement
 );
