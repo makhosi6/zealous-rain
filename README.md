@@ -9,13 +9,13 @@
 Run download and run it locally. 
 
 ```
-git clone https://github.com/makhosi6/zealous-rain.git
+1. git clone https://github.com/makhosi6/zealous-rain.git
 
-npm i
+2. npm i
 
-*And then edit/create the .env file, refer to .env.example*
+3. **And then edit/create the .env file, refer to .env.example**
 
-npm start
+4. npm start
 ```
 
 **[Live Here]()**
