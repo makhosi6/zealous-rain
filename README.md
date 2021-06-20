@@ -13,7 +13,7 @@ Run download and run it locally.
 
 2. npm i
 
-3. *And then edit/create the .env file, refer to .env.example*
+3. And then edit/create the .env file, refer to .env.example
 
 4. npm start
 ```
