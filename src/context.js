@@ -33,7 +33,7 @@ export default class MyProvider extends Component {
         },
         properties: {
           title: "Location",
-          description: "Cape town, WC.",
+          description: "ZA",
         },
       })
     );

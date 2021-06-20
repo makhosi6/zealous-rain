@@ -13,7 +13,7 @@ export default class Home extends Component {
         <Container style={{width: "100%"}} >
           <Map currentPage={context.currentPage} coords={context.coords}/>
           <Speaddial />
-        </Container>{" "}
+        </Container>
       </div>
        )}
        </MyContext.Consumer>
