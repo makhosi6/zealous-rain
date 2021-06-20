@@ -37,7 +37,7 @@ export default class App extends React.Component {
       // This is a fallback UI
       return (
         <>
-          <Error error={this.state.error} />
+          <Error currentPage={(x)=> console.error({x})} error={this.state.error} />
         </>
       );
     }

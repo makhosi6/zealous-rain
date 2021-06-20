@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, List } from '@material-ui/core';
 import Message from "../comp/Message";
 import { MyContext } from "../context";
-
+import PropTypes from 'prop-types';
 
 export default class Messages extends Component {
 
@@ -26,3 +26,6 @@ componentDidMount(){
     );
   }
 }
+Messages.propTypes = {
+  currentPage: PropTypes.func
+};

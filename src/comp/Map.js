@@ -1,5 +1,6 @@
 import React from "react";
 import mapboxgl from "!mapbox-gl";
+import PropTypes from 'prop-types';
 
 mapboxgl.accessToken =
   process.env.REACT_APP_TOKEN;
@@ -57,3 +58,10 @@ this.props.coords.features.forEach(function(marker) {
     );
   }
 }
+Map.propTypes = {
+  currentPage: PropTypes.func,
+  coords: PropTypes.exact({
+    type: PropTypes.string,
+    features: PropTypes.array
+  }),   
+};

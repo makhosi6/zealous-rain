@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 import {
   ListItemText,
   ListItem,
@@ -6,9 +7,19 @@ import {
   ListItemAvatar,
   Avatar,
 } from "@material-ui/core";
-import { Image as ImageIcon, StarOutline } from "@material-ui/icons";
+import { Image as ImageIcon, StarOutline,Star } from "@material-ui/icons";
 
 export default class Message extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      starred: false
+    }
+  }
+  
+  star = () => {
+    this.setState({starred: !this.state.starred})
+  }
 
   render() {
     return (
@@ -25,7 +36,7 @@ export default class Message extends Component {
             primary={this.props.data.subject}
             secondary={this.props.data.message}
           />
-          <div style={{maxHeight: "max-content", margin: 'auto',}} >
+          <div style={{maxHeight: "max-content", margin: 'auto'}} >
             <small
               style={{
                 position: "absolute",
@@ -35,10 +46,21 @@ export default class Message extends Component {
             >
               {this.props.data.display}
             </small>
-            <StarOutline
-                color="disabled"
-              style={{ marginTop : "30px" }}
-            />
+            <span onClick={this.star}>
+            {
+              (this.state.starred?
+                
+                <Star
+                  style={{ marginTop : "30px" , color: "#ffcf40"}}
+                />
+                :
+                <StarOutline
+                  style={{ marginTop : "30px" , color: "grey"}}
+                />
+                )
+            }
+            </span>
+            
           </div>
         </ListItem>
         <Divider light />
@@ -46,3 +68,11 @@ export default class Message extends Component {
     );
   }
 }
+
+Message.propTypes = {
+  data: PropTypes.exact({
+    message: PropTypes.string,
+    subject: PropTypes.string,
+    display: PropTypes.string
+  })
+};

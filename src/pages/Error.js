@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 export default class Error extends Component {
     componentDidMount(){
@@ -17,3 +18,7 @@ export default class Error extends Component {
         )
     }
 }
+Error.propTypes = {
+    currentPage: PropTypes.func,
+    error: PropTypes.string
+  };
