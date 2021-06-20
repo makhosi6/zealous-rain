@@ -3,7 +3,7 @@ import mapboxgl from "!mapbox-gl";
 import PropTypes from 'prop-types';
 
 mapboxgl.accessToken =
-  process.env.REACT_APP_TOKEN;
+  process.env.REACT_APP_TOKEN || "pk.eyJ1IjoibWFraG9zaWkiLCJhIjoiY2txMnB0dWdkMDV5bDJwdXMzZzdxZjZ2biJ9.iDiIYxSK5uHCJibuqc5K-w";
 
 export default class Map extends React.PureComponent {
   constructor(props) {
