@@ -2,7 +2,9 @@
 
 ### Created with CodeSandbox
 
-[Open CodeSandbox](https://codesandbox.io/s/github/makhosi6/zealous-rain) to run and test this project.
+1. [Open CodeSandbox](https://codesandbox.io/s/github/makhosi6/zealous-rain) to run and test this project.
+
+2. Edit/create the .env file, refer to .env.example
 
 ### OR
 
