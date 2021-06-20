@@ -14,7 +14,7 @@ export default class MyProvider extends Component {
       coords: this.fetchCoords(),
     };
   }
-  currentPage = (current ={page: "Quicklc8", slug: '/'}) => {
+  currentPage = (current = {page: "Quicklc8", slug: '/'}) => {
       this.setState({current})
   }
   fetchCoords = () => {
@@ -42,6 +42,7 @@ export default class MyProvider extends Component {
   };
 
   render() {
+
     return (
       <MyContext.Provider value={this.state}>
         {this.props.children}

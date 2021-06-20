@@ -1,14 +1,4 @@
-@-webkit-keyframes blinker {
-  0% {
-      opacity: 1;
-  }
-  50% {
-      opacity:  0.5;
-  }
-  100% {
-      opacity: 1;
-  }
-}
+
 @-moz-keyframes blinker {
   0% {
       opacity: 1;
@@ -31,6 +21,17 @@
       opacity: 1;
   }
 }
+@-webkit-keyframes blinker {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity:  0.5;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 body {
     margin: 0;
     padding: 0;
@@ -41,12 +42,12 @@ body {
   top: 50vh;
   left: 50vw;
   transform: translate(-50%,-50%);
-  -webkit-animation: blinker 1s;
-  -webkit-animation-iteration-count: infinite;
   -moz-animation: blinker 1s;
   -moz-animation-iteration-count: infinite;
   -o-animation: blinker 1s;
   -o-animation-iteration-count: infinite;
+  -webkit-animation: blinker 1s;
+  -webkit-animation-iteration-count: infinite;
 }
 p{
     text-overflow: ellipsis;

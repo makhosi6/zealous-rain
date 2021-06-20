@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Fab,Link} from "@material-ui/core/Fab";
+import {Fab,Link} from "@material-ui/core";
 import Mail from "@material-ui/icons/Mail";
 
 export default class Speeeddial extends Component {
