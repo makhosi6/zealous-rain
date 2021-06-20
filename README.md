@@ -1,10 +1,10 @@
 # zealous-rain
 
-## Created with CodeSandbox
+### Created with CodeSandbox
 
 [Open CodeSandbox](https://codesandbox.io/s/github/makhosi6/zealous-rain) to run and test this project.
 
-## OR
+### OR
 
 Run download and run it locally. 
 
