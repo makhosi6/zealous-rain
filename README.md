@@ -19,5 +19,3 @@ Run download and run it locally.
 
 4. npm start
 ```
-
-**[Live Here]()**
