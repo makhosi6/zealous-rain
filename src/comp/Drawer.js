@@ -85,7 +85,7 @@ export default function TempDrawer() {
         {items.map((item) => (
           <>
             <Link href={item.text}>
-              <ListItem key={Math.floor(Math.random * 1900)} button>
+              <ListItem key={Math.floor(Math.random() * 1900)} button>
                 <ListItemIcon>
                   {item.name === "Home" ? <Home /> : <Mail />}
                 </ListItemIcon>
@@ -102,7 +102,7 @@ export default function TempDrawer() {
     <div>
       <React.Fragment key="left">
         <MenuIcon
-          key={Math.floor(Math.random * 1900)}
+          key={Math.floor(Math.random() * 1900)}
           onClick={toggleDrawer("left", true)}
         />
         <Drawer
